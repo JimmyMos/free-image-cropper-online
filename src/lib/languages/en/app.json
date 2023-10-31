@@ -1,0 +1,110 @@
+{
+    "lang_id"        : "en",
+    "lang_path"      : "en",
+    "lang_label"     : "English",
+
+    "seo_title"      : "Jimmy Mostovoi || Freelance Web Engineer",
+    "seo_description": "I'm passionate about optimizing user experience and generating tangible results. My goal is to skillfully combine creativity, technology, and marketing to deliver quality online experiences.",
+
+    "short_description" : "Full stack web dev & passionate digital marketing consultant ⭐",
+    "signature"         : "Developed with ❤️ by Jimmy Mostovoi.",
+
+    "nav_home"       : "Home",
+    "nav_skills"     : "Skills",
+    "nav_portfolio"  : "Portfolio",
+    "nav_web_dev"    : "Web development",
+    "nav_digital_marketing"  : "Digital Marketing",
+    "nav_carriere"   : "Career",
+    "nav_clients"    : "Clients",
+    "nav_contact"    : "Contact",
+
+    "theme"          : "Theme",
+    "language"       : "Language",
+    "site_plan"      : "Site plan",
+    "useful_links"   : "Useful links",
+    "privacy_policy" : "Privacy policy",
+    "legale_notice"  : "Legale notice",
+
+    "hello"          : "Hello & Welcome",
+    "i_am"           : "I am",
+    "job"            : "A digital marketer & full stack web dev",
+    "presentation"   : "My technical expertise allows me to design high-performing and intuitive web solutions. I'm passionate about optimizing user experience and generating tangible results. My goal is to skillfully combine creativity, technology, and marketing to deliver quality online experiences.",
+    "main_skills"    : "Main Skills",
+    "contact"        : "Contact",
+
+    "skills_pretitle": "Skills",
+    "skills_title"   : "I accompany you for",
+    "skills_1_title" : "Business Digitalization",
+    "skills_1_descr" : "Guidance in digitalizing and automating different aspects of your business.",
+    "skills_2_title" : "Web Development",
+    "skills_2_descr" : "Redesign or creation of a new project from scratch.",
+    "skills_3_title" : "Web Integration",
+    "skills_3_descr" : "Integration of new functionalities into your existing application & debugging.",
+    "skills_4_title" : "SEO",
+    "skills_4_descr" : "Sustainably improve the positioning of your pages on search engines.",
+    "skills_5_title" : "SEA",
+    "skills_5_descr" : "Ad placements to achieve your business objectives.",
+    "skills_6_title" : "Data Tracking",
+    "skills_6_descr" : "Access all user data while respecting local regulations.",
+
+    "pf_pretitle": "Some examples of projects carried out by me",
+    "pf_title"   : "My Portfolio",
+    "pf_button"  : "VIEW PROJECT",
+    "pf_redesign": "Redesign",
+    "pf_webdev"  : "Web Development",
+
+    "pf_1_title"     : "Redesign of the web interfaces for a core banking system",
+    "pf_1_content"   : "Redesign of the interfaces to allow agents to manage KYC, new user registrations, clearing management, deposits, withdrawals, account closure, suspension, access to transaction history, and much more.<br><br>Challenges encountered: Multilanguage management, strict communication with the core, interface security against different types of attacks, complex interfaces (enrollment/KYC).<br><br>Technologies used: CodeIgniter, Jquery, Cropper.js, PHP, JS, HTML, CSS.",
+    
+    "pf_2_title"     : "Development of the showcase website for the VYZYO group",
+    "pf_2_content"   : "Development of a corporate website showcasing the different fields of activity of the VYZYO group. VYZYO is a group specialized in fintech, telecoms, and value-added services (VAS). The group operates in many countries, including developing countries, and the partners involved in the development of the numerous projects are diverse and prestigious.<br><br>Challenges encountered: Multilanguage management, information synthesis & architecture, alignment with the CEO's vision.<br><br>Technologies used: Wordpress, DIVI, PHP, JS, HTML, CSS.",
+    
+    "pf_3_title"     : "Development of the showcase website for TAKPay",
+    "pf_3_content"   : "Development of a showcase website for TAKPay, a mobile wallet for Tunisia in partnership with Al Baraka Bank. TAK offers financial services to accompany you according to your needs. Transfer or receive money instantly. Pay your merchants just as quickly.<br><br>Challenges encountered: None.<br><br>Technologies used: Wordpress, DIVI, PHP, JS, HTML, CSS.",
+    
+    "pf_4_title"     : "Development of the showcase website for YUNUSPay",
+    "pf_4_content"   : "Development of a showcase website for YUNUSPay, a mobile wallet for Cameroon in partnership with Campost. All Campost-YunusPay services are accessible from the mobile application. CAMPOST agencies allow you to deposit and withdraw cash. Your mobile phone allows you to have your financial services directly in your pocket. Manage your account and activities from the Campost-YunusPay application. With this mobile wallet, we enable Cameroonians to use a modern and secure system to manage their money.<br><br>Challenges encountered: Multilanguage management.<br><br>Technologies used: Wordpress, DIVI, PHP, JS, HTML, CSS.",
+
+    "cv_pretitle"    : "3+ years of experience in the web",
+    "cv_title"       : "My Curriculum Vitae",
+    "currently_employed" : "currently employed",
+    "cv_experiences" : "Professional experiences",
+    "cv_studies"     : "Studies & certifications",
+
+    "cv_1_title"     : "Project Manager Web & Marketing",
+    "cv_1_content"   : "Project management related to digital marketing and web development for various subsidiaries of the VYZYO group. My missions were mainly related to web development (redesign or creation of showcase websites and administration interfaces). I was also involved in digital marketing missions on the topics of ASO and monetization of a streaming platform.",
+
+    "cv_2_title"     : "Digital marketing consultant",
+    "cv_2_content"   : "Supporting clients in various web-related issues (SEO, SEA, data tracking, data visualization, CRO, emailing, etc.).",
+
+    "cv_3_title"     : "Bachelor in Web Marketing & UX",
+    "cv_3_content"   : "Training in various aspects of digital communication (SEO, SEA, UX design, Data analysis, Social Media, Strategy, Photo/Video Editing, ...). Graduated with honors from the jury.",
+
+    "cv_4_title"     : "Advanced Technician's Certificate in Customer Relationship Negotiation",
+    "cv_4_content"   : "Studied subjects related to commerce (communication, law, management, economics, customer relations, administration, accounting, ...).",
+    
+    "tools_pretitle" : "Skills tailored to your needs",
+    "tools_title"    : "Tools",
+
+    "clients_pretitle" : "Clients",
+    "clients_title"    : "I have supported them",
+
+    "ga4_certif"   : "Certification Google Analytics 4",
+    "sept_2022"    : "September 2022",
+    "ga4_certif_desc" : "The GA4 certification is a recognition awarded by Google to attest to an individual's skills in using Google Analytics 4.<br><br>It can be obtained by passing an official exam offered by Google, which covers various aspects of GA4, including configuration, event tracking, data analysis, etc.",
+
+    "auto_entrepreneur" : "auto entrepreneur",
+
+    "ceo": "CEO",
+    "associate": "Partner",
+    "founder_marketing_digital_expert": "Founder / Digital marketing expert",
+    "data_consultant": "Data marketing consultant",
+    "entrepreneur": "Entrepreneur",
+    "greg_job": "Co-founder of Design Fiction Studio | ",
+    "website_redesign": "Website redesign",
+    "web_integration": "Web integration",
+    "data_viz_tracking": "Automation of data tracking and visualization",
+    "lead_fb_ads": "Lead generation via Facebook Ads",
+    "data_tracking_set_up": "Implementation of a data trackind solution for the web",
+    "interface_design": "Interface design"
+}

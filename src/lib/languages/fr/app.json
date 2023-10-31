@@ -1,0 +1,111 @@
+{
+    "lang_id"        : "fr",
+    "lang_path"      : "",
+    "lang_label"     : "Français",
+    
+    "seo_title"      : "Jimmy Mostovoi || Ingénieur Web Freelance",
+    "seo_description": "Je suis passionné par l'optimisation de l'expérience utilisateur et la génération de résultats tangibles. Mon objectif est de combiner habilement la créativité, la technologie et le marketing pour offrir des expériences en ligne de qualité.",
+
+    "short_description" : "Dev web full stack & consultant marketing digital passioné ⭐",
+    "signature"         : "Développé avec ❤️ par Jimmy Mostovoi.",
+
+    "nav_home"       : "Accueil",
+    "nav_skills"     : "Skills",
+    "nav_portfolio"  : "Portfolio",
+    "nav_web_dev"    : "Développement web",
+    "nav_digital_marketing"  : "Marketing digital",
+    "nav_carriere"   : "CV",
+    "nav_clients"    : "Clients",
+    "nav_contact"    : "Contact",
+
+    "theme"          : "Thème",
+    "language"       : "Langue",
+    "site_plan"      : "Plan de site",
+    "useful_links"   : "Liens utiles",
+    "privacy_policy" : "Politique de confidentialité",
+    "legale_notice"  : "Mentions légales",
+
+    "hello"          : "Bonjour & Bienvenue",
+    "i_am"           : "Je suis",
+    "job"            : "Consultant marketing digital & dev web full stack", 
+    "presentation"   : "Mon expertise technique me permet de concevoir des solutions web performantes et intuitives. Je suis passionné par l'optimisation de l'expérience utilisateur et la génération de résultats tangibles. Mon objectif est de combiner habilement la créativité, la technologie et le marketing pour offrir des expériences en ligne de qualité.",
+    "main_skills"    : "Compétences principales",
+    "contact"        : "Contact",
+
+    "skills_pretitle": "Skills",
+    "skills_title"   : "Je vous accompagne",
+    "skills_1_title" : "Digitalisation d'activité", 
+    "skills_1_descr" : "Accompagnement à la digitalisation & automatisation de différents aspects de votre activité.",  
+    "skills_2_title" : "Développement web",
+    "skills_2_descr" : "Refonte ou création d'un nouveau projet from scratch.",
+    "skills_3_title" : "Intégration web",
+    "skills_3_descr" : "Intégration de nouvelles fonctionnalités à votre application existante & debugging.",
+    "skills_4_title" : "SEO",
+    "skills_4_descr" : "Améliorer de manière durable le positionnement de vos pages sur les moteurs de recherche.",
+    "skills_5_title" : "SEA",
+    "skills_5_descr" : "Achats d'emplacements publicitaires pour atteindre vos objectifs commerciaux.",
+    "skills_6_title" : "Data tracking",
+    "skills_6_descr" : "Accédez à toutes les données de vos utilisateurs tout en respetcant les législations locales.",
+
+    "pf_pretitle"    : "Quelques exemples de projets réalisés par mes soins",
+    "pf_title"       : "Mon portfolio",
+    "pf_button"      : "VOIR LE PROJET",
+    "pf_redesign"    : "Refonte",
+    "pf_webdev"      : "Développement web",
+    
+    "pf_1_title"     : "Refonte des administrations web pour un core banking",
+    "pf_1_content"   : "Refonte des interfaces pour permettre aux agents de procéder à la gestion des KYC, inscriptions de nouveaux utilisateurs, gestion du clearing, dépôts, retraits, fermeture de compte, suspension, accès à l'historique des transactions et bien plus encore.<br><br>Défis rencontrés: Gestion du multilangue, communication stricte avec le core, sécurité des interfaces faces à différents types d'attaques, interface complexes (enrollment / KYC).<br><br>Technologies utilisées: CodeIgniter, Jquery, Cropper.js, PHP, JS, HTML, CSS.",
+    
+    "pf_2_title"     : "Développement du site vitrine du groupe VYZYO",
+    "pf_2_content"   : "Développement d'un site corporate présentant les différents champs d'activité du groupe VYZYO. VYZYO est un groupe spécialisé dans les fintech, les telecoms et les VAS (value added services). Le groupe est présent dans de nombreux pays, notamment des pays en voie de développement et les partenaires qui permettent le développement des nombreux projets du groupe sont variés et prestigieux.<br><br>Défis rencontrés: Gestion du multilangue, synthétiser & architecturer l'information, correspondre à la vision du CEO.<br><br>Technologies utilisées: Wordpress, DIVI, PHP, JS, HTML, CSS.",
+    
+    "pf_3_title"     : "Développement du site vitrine de TAKPay",
+    "pf_3_content"   : "Développement d'un site vitrine pour TAKPay, wallet mobile pour la Tunisie en partenariat avec Al Baraka Bank. TAK propose des services financiers pour vous accompagner en fonction de vos besoins. Transférez ou recevez de l'argent de manière instantanée. Payez vos commerçants tout aussi rapidement.<br><br>Défis rencontrés: RAS.<br><br>Technologies utilisées: Wordpress, DIVI, PHP, JS, HTML, CSS.",
+    
+    "pf_4_title"     : "Développement du site vitrine de YUNUSPay",
+    "pf_4_content"   : "Développement d'un site vitrine pour YUNUSPay, wallet mobile pour le Cameroun en partenariat avec la Campost. Tous les services Campost-YunusPay sont accessibles depuis l'application mobile. Les agences CAMPOST vous permettent de déposer et de retirer de l'argent en espèce. Votre téléphone portable vous permet d'avoir vos services financiers directement dans votre poche. Pilotez votre compte et vos activités depuis l'application Campost-YunusPay. Grâce à ce wallet mobile nous permettons aux camerounais d'utiliser un système moderne et sécurisé pour gérer leur argent.<br><br>Défis rencontrés: Gestion du multilangue.<br><br>Technologies utilisées: Wordpress, DIVI, PHP, JS, HTML, CSS.",
+
+    "cv_pretitle"    : "3+ années d'expérience dans le web",
+    "cv_title"       : "Mon Curriculum Vitae",
+    "currently_employed" : "en poste",
+    "cv_experiences" : "Expériences professionnelles",
+    "cv_studies"     : "Études & certifications",
+
+    "cv_1_title"     : "Project Manager Web & Marketing",
+    "cv_1_content"   : "Gestion de projets touchant au marketing digital et aux développement web pour différentes filiales du groupe VYZYO.<br><br>Les missions qui m'ont été confiées étaient principalement liées au développement web (refonte ou création de sites vitrines et interfaces d'administration).<br><br>J'ai également été solicité pour des missions liées au marketing digital sur les thèmes de l'ASO et de la monétisation d'une plateforme de streaming.",
+
+    "cv_2_title"     : "Consultant marketing digital",
+    "cv_2_content"   : "Accompagnement des clients face à divers problématiques liées au web (SEO, SEA, data tracking, data vizualisation, CRO, emailing, ...).",
+
+    "cv_3_title"     : "Bachelor Webmarketing & UX",
+    "cv_3_content"   : "Formation aux différents leviers de la communication digitale (SEO, SEA, UX design, Data analyse, Médias sociaux, Stratégie, Montage photos / vidéos, ...). Diplômé avec félicitations du jury.",
+
+    "cv_4_title"     : "BTS Négociation Relation Client",
+    "cv_4_content"   : "Étude de matières liées au commerce (communication, droit, management, économie, relation client, gestion, comptabilité, ...).",
+
+    "tools_pretitle" : "Des compétences adaptées à vos besoins",
+    "tools_title"    : "Outils",
+
+    "clients_pretitle" : "Clients",
+    "clients_title"    : "Je les ai accompagnés",
+
+    "ga4_certif"   : "Certification Google Analytics 4",
+    "sept_2022"    : "Septembre 2022",
+    "ga4_certif_desc" : "La certification GA4 est une reconnaissance décernée par Google pour attester des compétences d'un individu dans l'utilisation de Google Analytics 4.<br><br>Elle peut être obtenue en réussissant un examen officiel proposé par Google, qui couvre divers aspects de GA4, y compris la configuration, le suivi des événements, l'analyse des données, etc.",
+
+    "auto_entrepreneur" : "auto-entrepreneur",
+
+    "ceo"        : "CEO",
+    "associate"  : "Associé",
+    "founder_marketing_digital_expert" : "Fondateur / Expert marketing digital",
+    "data_consultant" : "Consultant data marketing",
+    "entrepreneur" : "Entrepreneur",
+    "greg_job"     : "Co-fondateur du Design Fiction Studio | Web & Graphic Designer indépendant",
+
+    "website_redesign" : "Refonte de site web",
+    "web_integration"  : "Intégration web",
+    "data_viz_tracking": "Automatisation du tracking de données et visualisation",
+    "lead_fb_ads"      : "Génération de leads via Facebook Ads",
+    "data_tracking_set_up" : "Mise en place d'une solution de trackind de données pour le web",
+    "interface_design" : "Design d'interface"
+} 
