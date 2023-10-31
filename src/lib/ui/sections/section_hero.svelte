@@ -11,7 +11,7 @@
 <Section id="hero_home_section" withTitle={false}>
     <div class="left">
         <span class="welcome">{$t('c.hello')}</span>
-        <h1><span>{$t('c.i_am')}</span> <span>Jimmy MostovoiX</span></h1>
+        <h1><span>{$t('c.i_am')}</span> <span>Jimmy MostovoiXXX</span></h1>
         <h2>{$t('c.job')} &#11088;</h2>
         <span class="content">{$t('c.presentation')}</span>
         <div class="icons_section_wrapper">
