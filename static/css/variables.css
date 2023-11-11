@@ -149,9 +149,9 @@ body[theme=dark]{
     100% {transform: translate(-50%,-50%) rotate(360deg);}
 }
 
-@keyframes levitate {
+@keyframes click_me {
     0%   {transform: scale(100%) translateY(0);}
-    50%  {transform: scale(100%) translateY(-2%);}
+    50%  {transform: scale(100%) translateY(-20%);}
     100% {transform: scale(100%) translateY(0);}
 }
 

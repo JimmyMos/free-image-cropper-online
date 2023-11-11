@@ -155,7 +155,7 @@
     :global(img){
         max-width: 100%;
         transform: translateY(0%) scale(100%);
-        animation-name: levitate;
+        animation-name: click_me;
         animation-duration: 4s;
         animation-iteration-count: infinite
     }

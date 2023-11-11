@@ -49,6 +49,19 @@
     &:global(.icon_button svg){
         margin-right: 0;
     }
+    &:global(.forbidden_button){
+        cursor: not-allowed;
+        background-color: #36393c;
+        :global(a){
+            cursor: not-allowed;
+        }
+    }
+    &:global(.click_me){
+        transform: translateY(0%) scale(100%);
+        animation-name: click_me;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite
+    }
 }
 
 @media (max-width: 700px) {

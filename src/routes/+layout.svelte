@@ -48,7 +48,6 @@
     var elWrapperCropper;
     var elPreviewCont;
     //
-    //
     const toBase64 = file => new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
@@ -93,47 +92,7 @@
             flipYValue = 1;
             flipXValue = 1;
             //rotateOrientation = rotateValues["state1"];
-            if(typeof this.cropper !== 'undefined')
-            {
-                /*
-                // Get cropper data
-                var cropperContainerData = this.cropper.getContainerData();
-                var cropperCanvasData    = this.cropper.getCanvasData();
-                var cropperImageData     = this.cropper.getImageData();
-                var cropperCropBoxData   = this.cropper.getCropBoxData();
-    
-                // Get canvas dimensions
-                var cropperCanvasData = this.cropper.getCanvasData();
-                var canvasWidth       = cropperCanvasData.width;
-                var canvasHeight      = cropperCanvasData.height;
-    
-                // Set cropbox dimensions to 1px and center it to the workspace
-                // This step allow to put the canvas to the top left
-                this.cropper.setCropBoxData({
-                    width: 1,
-                    height: 1,
-                    top: 0,
-                    left: 0,
-                });
-    
-                // Set canvas position to top left
-                this.cropper.setCanvasData({
-                    top: 0, 
-                    left: 0,
-                });
-    
-                // Set cropbox dimensions to 100% of the canvas
-                this.cropper.setCropBoxData({
-                    width: canvasWidth,
-                    height: canvasHeight,
-                    top: 0,
-                    left: 0,
-                });
-    
-                // Set orientation
-                this.cropper.scale(1, 1);
-                */
-            }
+            //
             document.addEventListener('destroy_cropper', (e) => {
                 try {
                     this.cropper.destroy();   
@@ -142,28 +101,7 @@
                 }
             })
         },
-        zoom: function(){
-            // Allow the cropbox to stick to the canvas on zoom by adding a delay  
-            //setTimeout(function() { sizeCropBox(); }, 10);
-        },
     };
-    async function handleFileChange(CropperOptions){
-        elCropperFileInput.addEventListener('change', async (e) => {
-            console.log('change trigger');
-            var base64Img = await fileToBase64(elCropperFileInput);
-            elCropper.setAttribute('src', base64Img);
-            //
-            const eVDestroyCropper = new Event("destroy_cropper");
-            document.dispatchEvent(eVDestroyCropper);
-            //
-            const cropper = new Cropper(elCropper, CropperOptions);
-            //
-            addClass(elwrapperNoImg, 'hidden');
-            removeClass(elWrapperCropper, 'hidden');
-            sizeCropperWrapper(elWrapperCropper, document.querySelector('.cropper_wrapper'));
-            //
-        })
-    }
     function sizeCropperWrapper(elCropperCont, elParent){
         console.log(elCropperCont);
         elCropperCont.style.width  = (elParent.offsetWidth  - 40).toString()+'px';
@@ -174,7 +112,48 @@
     //
     onMount(() => {
         if(browser){
-            var elBody = document.querySelector('body');
+            var elBody         = document.querySelector('body');
+            var elListButtons  = document.querySelectorAll('.button');
+            var elUploadImgBtn = document.querySelector('#upload_file_btn');
+            //
+            var stateActiveCropper = false;
+            function setStateActiveCropper(state){
+                if(state === false){
+                    addClass(elWrapperCropper, 'hidden');
+                    removeClass(elwrapperNoImg, 'hidden');
+                    elListButtons.forEach(element => {
+                        addClass(element, 'forbidden_button');
+                    });
+                    removeClass(elUploadImgBtn, 'forbidden_button');
+                    addClass(elUploadImgBtn, 'click_me');
+                }
+                if(state === true){
+                    addClass(elwrapperNoImg, 'hidden');
+                    removeClass(elWrapperCropper, 'hidden');
+                    sizeCropperWrapper(elWrapperCropper, document.querySelector('.cropper_wrapper'));
+                    elListButtons.forEach(element => {
+                        removeClass(element, 'forbidden_button');
+                    });
+                    removeClass(elUploadImgBtn, 'click_me');
+                }
+            }
+            setStateActiveCropper(stateActiveCropper);
+            async function handleFileChange(CropperOptions){
+                elCropperFileInput.addEventListener('change', async (e) => {
+                    console.log('change trigger');
+                    var base64Img = await fileToBase64(elCropperFileInput);
+                    elCropper.setAttribute('src', base64Img);
+                    //
+                    const eVDestroyCropper = new Event("destroy_cropper");
+                    document.dispatchEvent(eVDestroyCropper);
+                    //
+                    //
+                    stateActiveCropper = true;
+                    setStateActiveCropper(stateActiveCropper);
+                    const cropper = new Cropper(elCropper, CropperOptions);
+                    //
+                })
+            }
             //
             elBody.setAttribute('is_top_of_page', IsTopOfPage());
             document.addEventListener('scroll', function(){
@@ -332,8 +311,8 @@
         <link rel="stylesheet" href="/css/reset.css?11231">
         <link rel="stylesheet" href="/css/styles.css?11231">
     
-        <title>Jimmy Mostovoi || {$t('c.job')}</title>
-        <meta name="description" t="seo_description" content="{$t('c.seo_description')}">
+        <title>Free Image Cropper Online</title>
+        <meta name="description" t="seo_description" content="">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -461,7 +440,7 @@
                 <div class="main_buttons_wrapper">
                     <Button 
                         id="upload_file_btn"
-                        label={'Upload file'} 
+                        label={'Upload image'} 
                         url={''} 
                         icon="/img/icons/upload.svg"
                     />
@@ -473,7 +452,7 @@
                     />
                     <Button 
                         id="get_img_btn"
-                        label={'Get image'} 
+                        label={'Download image'} 
                         url={''} 
                         icon="/img/icons/download2.svg"
                     />
@@ -482,82 +461,80 @@
         </div>
     </main>
     
-    <style lang="scss">
-        main{
-            .working_container{
-                height: calc(100vh - 80px);
-                width: calc(100% - 80px);
-                margin: 40px;
-                border: 1px solid var(--font_color);
+<style lang="scss">
+    main{
+        .working_container{
+            height: calc(100vh - 80px);
+            width: calc(100% - 80px);
+            margin: 40px;
+            border: 1px solid var(--font_color);
+            display: flex;
+            border-radius: 4px;
+            box-shadow: var(--card_boxshadow);
+            background-color: var(--mobile_menu_bg);
+            .cropper_wrapper{
                 display: flex;
-                border-radius: 4px;
-                box-shadow: var(--card_boxshadow);
-                background-color: var(--mobile_menu_bg);
-                .cropper_wrapper{
+                align-items: center;
+                justify-content: center;
+                flex-grow: 1;
+                .wrapper_no_img{
+                    #add_img_text{
+                        color: #8427f9;
+                        cursor: pointer;
+                    }
+                }
+                .cropper_cont{
+                    background-color: var(--bg_color);
+                    #cropper_img{
+                        display: block;
+                        max-width: 100%;
+                    }
+                }
+            }
+            .control_wrapper{
+                width: 240px;
+                border-left: 1px solid var(--font_color);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                .img_preview_cont{
+                    width: 220px;
+                    height: 124px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    flex-grow: 1;
-                    .wrapper_no_img{
-                        #add_img_text{
-                            color: var(--hilight1);
-                            cursor: pointer;
-                        }
-                    }
-                    .cropper_cont{
-                        background-color: var(--bg_color);
-                        #cropper_img{
-                            display: block;
-                            max-width: 100%;
-                        }
-                    }
+                    background-color: var(--bg_color);
                 }
-                .control_wrapper{
-                    width: 240px;
-                    border-left: 1px solid var(--font_color);
+                .img_preview{
+                    max-width: 220px;
+                    max-height: 124px;
+                    width: 220px;
+                    height: 124px /*16/9 ratio*/;
+                    overflow: hidden;
+                }
+                .action_buttons_container{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(auto-fill, auto);
+                    grid-row-gap: 40px;
+                    grid-column-gap: 40px;
+                }
+                .main_buttons_wrapper{
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding: 10px;
-                    .img_preview_cont{
-                        width: 220px;
-                        height: 124px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: var(--bg_color);
-                    }
-                    .img_preview{
-                        max-width: 220px;
-                        max-height: 124px;
-                        width: 220px;
-                        height: 124px /*16/9 ratio*/;
-                        overflow: hidden;
-                    }
-                    .action_buttons_container{
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        grid-template-rows: repeat(auto-fill, auto);
-                        grid-row-gap: 40px;
-                        grid-column-gap: 40px;
-                    }
-                    .main_buttons_wrapper{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 10px;
+                    gap: 10px;
+                    width: 100%;
+                    :global(.button){
                         width: 100%;
-                        :global(.button){
-                            width: 100%;
-                            :global(.svg){
-                                margin-left: auto;
-                            }
-                            :global(span){
-                                margin-right: auto;
-                            }
+                        :global(.svg){
+                        }
+                        :global(span){
                         }
                     }
                 }
             }
         }
-    </style>
+    }
+</style>
