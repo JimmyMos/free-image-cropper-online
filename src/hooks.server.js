@@ -41,7 +41,7 @@ export async function handle({ event, resolve }) {
         //
         // Set the chunk ('%theme%') in app.html
         const response = await resolve(event, {
-            transformPageChunk: ({ html }) => html.replace('%lang%', lang).replace('%theme%', theme)
+            transformPageChunk: ({ html }) => html.replace('%lang%', lang)
         });
         //
         return response;
