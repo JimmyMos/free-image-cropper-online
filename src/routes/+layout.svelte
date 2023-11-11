@@ -160,6 +160,7 @@
                 elBody.setAttribute('is_top_of_page', IsTopOfPage());
             });
             //
+            /*
             setTheme(data.theme, elBody, document.querySelectorAll('[toggle_theme]'));
             //
             if(typeof data.cookie_user_date === 'undefined' && typeof data.cookie_prefered_theme === 'undefined'){
@@ -170,6 +171,7 @@
             window.onbeforeunload = function(){
                 setUserDateCookie();
             };
+            */
             //
             document.querySelector('#upload_file_btn').addEventListener('click', (e) => {
                 e.preventDefault();
