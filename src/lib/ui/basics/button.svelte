@@ -1,14 +1,21 @@
 <script>
     import Hidden_link from '$lib/ui/basics/hidden_link.svelte';
+    import Svg from '$lib/ui/basics/svg.svelte';
     //
+    export let id     = '';
+    export let css_classes = '';
     export let url    = 'https://www.wikipedia.org/';
     export let label  = 'My button';
     export let target = '_self';
     export let isLink = true;
+    export let icon   = '';
     //
 </script>
 
-<div class="button">
+<div id={id} class="button {css_classes}">
+    {#if icon.length > 0}
+    <Svg icon="{icon}"/>
+    {/if}
     <span>{label}</span>
     {#if isLink === true}
     <Hidden_link url={url} label={label} target={target}/>
@@ -21,19 +28,26 @@
     display: flex;
     align-items: center;
     background-color: transparent;
-    border-radius: 6px;
+    border-radius: 2px;
     padding: 8px 12px;
     transition: var(--transition1);
     box-shadow: var(--boxshadow1);
-    background: var(--purple2);
+    background: var(--purple1);
     width: fit-content;
     cursor: pointer;
     &:hover{
-        transform: translateY(-4px);
+        background: var(--purple5);
     }
     span{
         color: var(--white1);
         font-weight: 500;
+    }
+    :global(svg){
+        fill: var(--font_color);
+        margin-right: 14px;
+    }
+    &:global(.icon_button svg){
+        margin-right: 0;
     }
 }
 
