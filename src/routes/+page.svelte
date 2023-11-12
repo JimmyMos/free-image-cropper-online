@@ -602,7 +602,7 @@ main{
         height: calc(100vh - 12px)!important;
         width: calc(100% - 12px)!important;
         .control_wrapper{
-            border-left: unset;
+            border-left: unset!important;
             border-top: 1px solid var(--font_color);
             width: 100%!important;
             .img_preview_cont{
