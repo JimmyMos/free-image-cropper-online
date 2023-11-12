@@ -356,6 +356,9 @@
                     <span>
                         Please, select an image by <span id="add_img_text" on:click={selectFile}>clicking here</span>
                     </span>
+                    <div class="underline_container">
+                        <div class="underline"></div>
+                    </div>
                 </div>
                 <div bind:this={elWrapperCropper} class="hidden cropper_cont">
                     <img id="cropper_img" class="hidden" bind:this={elCropper}>
@@ -494,9 +497,31 @@
                 justify-content: center;
                 flex-grow: 1;
                 .wrapper_no_img{
+                    position: relative;
+                    display: flex;
+                    overflow-y: visible;
                     #add_img_text{
                         color: #8427f9;
                         cursor: pointer;
+                    }
+                    .underline_container{
+                        overflow-x: hidden;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 2px;
+                        width: 100%;
+                        transform: translateY(8px);
+                        border-radius: 4px;
+                        .underline{
+                            background-color: #8427f9;
+                            width: 100%;
+                            height: 100%;
+                            transform: translateX(-100%);
+                            animation-name: click_me_underline;
+                            animation-duration: 1.5s;
+                            animation-iteration-count: infinite
+                        }
                     }
                 }
                 .cropper_cont{

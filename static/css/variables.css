@@ -177,3 +177,8 @@ body[theme=dark]{
 	0%   {transform: translateX(-50%);}
 	100% {transform: translateX(0);}
 }
+
+@keyframes click_me_underline {
+    0%   {transform: translateX(-100%);}
+    100% {transform: translateX(100%);}
+}
