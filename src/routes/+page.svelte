@@ -461,7 +461,21 @@
                 </div>
             </div>
         </div>
+        <div class="project_description_wrapper">
+            <h1>Free image cropper online</h1>
+            <p>
+                Easy, free and fast online image cropper. Upload you image, apply modifications and download it for free.<br>
+                For the time being, enjoy cropping, zooming, rotating, apply contrast, luminosity, invert and grayscale effects to your image.<br>
+                Feel free to make any use of your modified image.
+            </p>
+        </div>
     </main>
+    <Footer 
+        footer_data={footer_data}
+        logo="/img/logos/logo_jm.png"
+        description={$t('c.short_description')}
+        copyright="2023. All rights reserved, by Jimmy Mostovoi."
+    />
     
 <style lang="scss">
     main{
@@ -536,6 +550,23 @@
                         }
                     }
                 }
+            }
+        }
+        .project_description_wrapper{
+            max-width: 1200px;
+            padding: 10px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            h1{
+                font-size: 38px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            p{
+
             }
         }
     }

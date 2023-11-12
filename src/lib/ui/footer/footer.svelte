@@ -20,39 +20,7 @@
 </script>
 
 <footer>
-    <div class="wrapper">
-        <div class="container logo_container">
-            <img src="{logo}" alt="{logo_alt}">
-            <span class="description">{description}</span>
-            <Contact_bloc />
-        </div>
-        {#each footer_data as group}
-        <div class="container link_container">
-            <span class="title">{$t(group.title)}</span>
-            {#each group.items as item}
-
-            {#if item.is_internal === false}
-            <a href="{item.url}" target="{item.target}">{$t(item.label)}</a>
-
-            {:else if item.is_home_section === true} 
-            <a href="/{lang}{item.url}" target="{item.target}">{$t(item.label)}</a>
-
-            {:else}
-            <a href="/{lang_path}{item.url}" target="{item.target}">{$t(item.label)}</a>
-
-            {/if}
-            {/each}
-        </div>
-        {/each}
-        <div class="container link_container">
-            <span class="title">{$t('c.language')}</span>
-            <slot name="languagePicker" />
-            <span class="title">{$t('c.theme')}</span>
-            <Toggle_theme />
-        </div>
-    </div>
     <Signature />
-    <span class="rights">{copyright}</span>
 </footer>
 
 <style lang="scss">
