@@ -41,6 +41,7 @@
     span{
         color: var(--white1);
         font-weight: 500;
+        line-height: 1;
     }
     :global(svg){
         fill: var(--font_color);

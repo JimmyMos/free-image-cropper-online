@@ -505,7 +505,7 @@
                         position: absolute;
                         bottom: 0;
                         left: 0;
-                        height: 2px;
+                        height: 3px;
                         width: 100%;
                         transform: translateY(8px);
                         border-radius: 4px;
