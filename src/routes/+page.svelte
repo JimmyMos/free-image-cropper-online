@@ -137,6 +137,9 @@
                     removeClass(elUploadImgBtn, 'click_me');
                 }
             }
+            window.addEventListener('resize', (e) => {
+                sizeCropperWrapper(elWrapperCropper, document.querySelector('.cropper_wrapper'));
+            });
             setStateActiveCropper(stateActiveCropper);
             async function handleFileChange(CropperOptions){
                 elCropperFileInput.addEventListener('change', async (e) => {
@@ -477,118 +480,144 @@
     />
     
 <style lang="scss">
-    main{
-        .working_container{
-            height: calc(100vh - 80px);
-            width: calc(100% - 80px);
-            margin: 40px;
-            border: 1px solid var(--font_color);
+main{
+    .working_container{
+        height: calc(100vh - 80px);
+        width: calc(100% - 80px);
+        margin: 40px;
+        border: 1px solid var(--font_color);
+        display: flex;
+        border-radius: 4px;
+        box-shadow: var(--card_boxshadow);
+        background-color: var(--mobile_menu_bg);
+        .cropper_wrapper{
             display: flex;
-            border-radius: 4px;
-            box-shadow: var(--card_boxshadow);
-            background-color: var(--mobile_menu_bg);
-            .cropper_wrapper{
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            .wrapper_no_img{
+                position: relative;
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-grow: 1;
-                .wrapper_no_img{
-                    position: relative;
-                    display: flex;
-                    overflow-y: visible;
-                    #add_img_text{
-                        color: #8427f9;
-                        cursor: pointer;
-                    }
-                    .underline_container{
-                        overflow-x: hidden;
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        height: 3px;
-                        width: 100%;
-                        transform: translateY(8px);
-                        border-radius: 4px;
-                        .underline{
-                            background-color: #8427f9;
-                            width: 100%;
-                            height: 100%;
-                            transform: translateX(-100%);
-                            animation-name: click_me_underline;
-                            animation-duration: 1.5s;
-                            animation-iteration-count: infinite
-                        }
-                    }
+                overflow-y: visible;
+                #add_img_text{
+                    color: #8427f9;
+                    cursor: pointer;
                 }
-                .cropper_cont{
-                    background-color: var(--bg_color);
-                    #cropper_img{
-                        display: block;
-                        max-width: 100%;
+                .underline_container{
+                    overflow-x: hidden;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 3px;
+                    width: 100%;
+                    transform: translateY(8px);
+                    border-radius: 4px;
+                    .underline{
+                        background-color: #8427f9;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateX(-100%);
+                        animation-name: click_me_underline;
+                        animation-duration: 1.5s;
+                        animation-iteration-count: infinite
                     }
                 }
             }
-            .control_wrapper{
-                width: 240px;
-                border-left: 1px solid var(--font_color);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px;
-                .img_preview_cont{
-                    width: 220px;
-                    height: 124px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: var(--bg_color);
-                }
-                .img_preview{
-                    max-width: 220px;
-                    max-height: 124px;
-                    width: 220px;
-                    height: 124px /*16/9 ratio*/;
-                    overflow: hidden;
-                }
-                .action_buttons_container{
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-template-rows: repeat(auto-fill, auto);
-                    grid-row-gap: 40px;
-                    grid-column-gap: 40px;
-                }
-                .main_buttons_wrapper{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 10px;
-                    width: 100%;
-                    :global(.button){
-                        width: 100%;
-                        :global(.svg){
-                        }
-                        :global(span){
-                        }
-                    }
+            .cropper_cont{
+                background-color: var(--bg_color);
+                #cropper_img{
+                    display: block;
+                    max-width: 100%;
                 }
             }
         }
-        .project_description_wrapper{
-            max-width: 1200px;
-            padding: 10px;
-            margin: 0 auto;
+        .control_wrapper{
+            width: 240px;
+            border-left: 1px solid var(--font_color);
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 40px;
-            h1{
-                font-size: 38px;
-                font-weight: 600;
-                margin-bottom: 20px;
+            justify-content: space-between;
+            padding: 10px;
+            .img_preview_cont{
+                width: 220px;
+                height: 124px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--bg_color);
             }
-            p{
-
+            .img_preview{
+                max-width: 220px;
+                max-height: 124px;
+                width: 220px;
+                height: 124px /*16/9 ratio*/;
+                overflow: hidden;
+            }
+            .action_buttons_container{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(auto-fill, auto);
+                grid-row-gap: 40px;
+                grid-column-gap: 40px;
+            }
+            .main_buttons_wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                :global(.button){
+                    width: 100%;
+                    :global(.svg){
+                    }
+                    :global(span){
+                    }
+                }
             }
         }
     }
+    .project_description_wrapper{
+        max-width: 1200px;
+        padding: 10px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        h1{
+            font-size: 38px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        p{
+
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .working_container{
+        flex-direction: column;
+        margin: 6px!important;
+        height: calc(100vh - 12px)!important;
+        width: calc(100% - 12px)!important;
+        .control_wrapper{
+            border-left: unset;
+            border-top: 1px solid var(--font_color);
+            width: 100%!important;
+            .img_preview_cont{
+                display: none!important;
+            }
+            .action_buttons_container{
+                grid-template-columns: repeat(4, 1fr)!important;
+                grid-row-gap: 10px!important;
+                grid-column-gap: 10px!important;
+                margin-bottom: 10px;
+            }
+            :global(.button.click_me){
+                animation-name: none;
+            }
+        }
+    }
+}
 </style>
