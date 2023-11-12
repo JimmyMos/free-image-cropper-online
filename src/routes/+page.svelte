@@ -193,11 +193,11 @@
                 console.log(file);
                 //
                 var url = window.URL.createObjectURL(file);
-                jQuery('body').append('<a export_window class="hidden"></a>');
-                jQuery('a[export_window]').attr('href', url);
-                jQuery('a[export_window]').attr('download', 'Cropped image');
-                jQuery('a[export_window]')[0].click();
-                jQuery('a[export_window]')[0].remove();
+                document.querySelector('body').insertAdjacentHTML('beforeend', '<a export_window class="hidden"></a>');
+                document.querySelector('a[export_window]').setAttribute('href', url);
+                document.querySelector('a[export_window]').setAttribute('download', 'Cropped image');
+                document.querySelector('a[export_window]').click();
+                document.querySelector('a[export_window]').remove();
             })
             //
             function resetCropper(){
@@ -314,14 +314,10 @@
         <link rel="stylesheet" href="/css/styles.css?11231">
     
         <title>Free Image Cropper Online</title>
-        <meta name="description" t="seo_description" content="">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link async href="{fonts}" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.3/cropper.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.3/cropper.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" type="image/x-icon" href="/img/logos/logo_jm.png" />
     </svelte:head>
     
