@@ -317,6 +317,14 @@
         <link rel="stylesheet" href="/css/styles.css?11231">
     
         <title>Free Image Cropper Online</title>
+        <meta name="description" content="Easy, free and fast online image cropper. Upload you image, apply modifications and download it for free.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{data.origin}">
+        <meta property="og:title" content="Free Image Cropper Online">
+        <meta property="og:description" content="Easy, free and fast online image cropper. Upload you image, apply modifications and download it for free.">
+        <meta property="og:image" content="{data.origin}/favicon.png">
     
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -485,7 +493,7 @@ main{
         height: calc(100vh - 80px);
         width: calc(100% - 80px);
         margin: 40px;
-        border: 1px solid var(--font_color);
+        border: 1px solid #ffffff3a;
         display: flex;
         border-radius: 4px;
         box-shadow: var(--card_boxshadow);
@@ -533,7 +541,7 @@ main{
         }
         .control_wrapper{
             width: 240px;
-            border-left: 1px solid var(--font_color);
+            border-left: 1px solid #ffffff3a;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -590,7 +598,7 @@ main{
             margin-bottom: 20px;
         }
         p{
-
+            text-align: center;
         }
     }
 }

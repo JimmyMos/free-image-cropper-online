@@ -3,7 +3,11 @@
 import { PUBLIC_BASE_URL, PUBLIC_ENVIRONMENT } from '$env/static/public';
 import { error } from '@sveltejs/kit';
 //
-export async function load({ locals, cookies, url, params}) {
+export async function load({ locals, cookies, params, request}) {
+    //
+    const url = new URL(request.url);
+    const origin = url.origin; // e.g., "https://example.com"
+    const hostname = url.hostname; // e.g., "example.com"
     //
     if(/robots\.txt/.test(url.pathname)){
         throw error(404, {
@@ -12,11 +16,11 @@ export async function load({ locals, cookies, url, params}) {
     }
     else{
         return {
+            origin,
             "environment" : PUBLIC_ENVIRONMENT,
             "base_url"    : PUBLIC_BASE_URL,
             //
             "theme"       : locals.theme,
-            "pathname"    : url.pathname,
             //
             "cookie_prefered_theme"  : locals.cookie_prefered_theme,
             "cookie_user_date"       : locals.cookie_user_date,

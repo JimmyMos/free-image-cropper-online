@@ -2,7 +2,7 @@
     import { t } from '$lib/languages/translations';
 </script>
 
-<span class="signature"><a href="https://www.jimmymostovoi.com/en" target="_self">Developed with ❤️ by Jimmy Mostovoi.</a></span>
+<span class="signature"><a href="https://www.jimmymostovoi.com" target="_self">Developed with ❤️ by Jimmy Mostovoi.</a></span>
 
 <style lang="scss">
 .signature{
