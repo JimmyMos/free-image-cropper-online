@@ -1,5 +1,7 @@
 # Free Image Cropper Online
 
+> 🛑 This project was developed in 2023 and is no longer maintained.
+
 A **lightweight, client-side image-editing web app** that lets anyone crop, zoom, rotate and adjust basic effects on a picture directly in the browser, no downloads, log-ins or watermarks required.
 
 ## ✨ Features
